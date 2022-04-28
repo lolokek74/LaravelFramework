@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use \App\Http\Controllers\TestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,7 @@ Route::get('/', function () {
 });
 */
 
+/*
 //1 Задание
 Route::get('/my-name', function () {
     return 'Роденко Александр Витальевич';
@@ -92,3 +94,36 @@ Route::redirect('/admin/web', '/admin/color');
 Route::get('/color/{hex}', function ($hex){
     return "Цвет: {$hex}";
 })->where(['hex' => '[0-9A-F]{6}']);
+*/
+
+//
+Route::get('my-route', [TestController::class, 'lessonOne']);
+Route::get('data', [TestController::class, 'lessonTow']);
+//
+Route::get('quest1', [TestController::class, 'quest1']);
+
+Route::get('/quest2/{name?}', [TestController::class, 'quest2']);
+
+Route::get('/quest3/{name}/{text}', [TestController::class, 'quest3']);
+
+Route::get('/quest4', [TestController::class, 'quest4']);
+
+Route::get('/quest5/{a}/{b}', [TestController::class, 'quest5']);
+
+Route::get('/quest6/{cipher}', [TestController::class, 'quest6']);
+
+//
+Route::get('template/{detach}', [TestController::class, 'lessonTemplateOne']);
+//
+
+Route::get('quest21', [TestController::class, 'quest21']);
+
+Route::get('quest22/{detach}', [TestController::class, 'quest22']);
+
+Route::get('quest23/{detach}', [TestController::class, 'quest23']);
+
+Route::get('quest24', [TestController::class, 'quest24']);
+
+Route::get('quest25', [TestController::class, 'quest25']);
+
+Route::get('quest26', [TestController::class, 'quest26']);
