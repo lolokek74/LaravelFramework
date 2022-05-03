@@ -1,7 +1,7 @@
 @extends('site.index')
 
 @section('content')
-    <div class="row justify-content-center gy-3">
+    <div class="row justify-content-center gy-3 w-90">
         <div class="col-4">
             <div class="card h-100 m-auto" >
                 <img src="" class="card-img-top" alt="...">
