@@ -96,6 +96,7 @@ Route::get('/color/{hex}', function ($hex){
 })->where(['hex' => '[0-9A-F]{6}']);
 */
 
+/*
 //
 Route::get('my-route', [TestController::class, 'lessonOne']);
 Route::get('data', [TestController::class, 'lessonTow']);
@@ -127,3 +128,9 @@ Route::get('quest24', [TestController::class, 'quest24']);
 Route::get('quest25', [TestController::class, 'quest25']);
 
 Route::get('quest26', [TestController::class, 'quest26']);
+*/
+Route::view('/', 'site.index')->name('main');
+Route::view('/home', 'site.home')->name('home');
+Route::view('/news', 'site.news')->name('news');
+Route::view('/auth', 'site.auth')->name('auth');
+Route::view('/user', 'site.user')->name('user');
